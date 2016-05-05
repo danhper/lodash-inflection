@@ -5,8 +5,6 @@
 > [![Coverage Status][coveralls-badge]][coveralls]
 
 This is a fork of [Jeremy Ruppel underscore.inflection](https://github.com/jeremyruppel/underscore.inflection) for lodash.
-The major and minor versions correspond to their upstream equivalent,
-while the patch version may change to fix some minor issues in the fork.
 
 **Another javascript inflector?!**
 
@@ -188,18 +186,20 @@ Though no code was taken directly from them, they deserve plenty of props for do
 ## Contributors
 
 ```
-    54	Jeremy Ruppel
+    65	Jeremy Ruppel
+    15	Daniel Perez
      7	Landon Schropp
      2	Johnathon Sanders
      2	Seggy Umboh
+     1	Dayton Nolan
+     1	Joseph Spens
+     1	Kris Neuharth
+     1	Monica Olinescu
+     1	Sam Dornan
      1	Shane Riley
      1	bramski
      1	maratfakhreev
-     1	Dayton Nolan
      1	trevor
-     1	Joseph Spens
-     1	Kris Neuharth
-     1	Sam Dornan
 ```
 
 ## License

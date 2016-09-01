@@ -1,6 +1,6 @@
 {
   "name": "lodash-inflection",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "ActiveSupport::Inflector, for lodash!",
   "main": "index.js",
   "browser": "lib/lodash-inflection.js",

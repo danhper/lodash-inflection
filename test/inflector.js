@@ -8,57 +8,62 @@ describe('inflector', function() {
     });
   }
 
-  describe('plurals', function() {
-    [
+  var combinations = [
       ['rose', 'roses'],
-      ['axis', 'axes'],
-      ['virus', 'viri'],
-      ['alias', 'aliases'],
-      ['bus', 'buses'],
       ['tomato', 'tomatoes'],
       ['datum', 'data'],
-      ['analysis', 'analyses'],
-      ['life', 'lives'],
-      ['leaf', 'leaves'],
-      ['loaf', 'loaves'],
-      ['thief', 'thieves'],
-      ['hive', 'hives'],
       ['boss', 'bosses'],
       ['soliloquy', 'soliloquies'],
       ['wish', 'wishes'],
-      ['vertex', 'vertices'],
+      ['parenthesis', 'parentheses'],
+      ['thesis', 'theses'],
+      ['analysis', 'analyses'],
+      ['life', 'lives'],
+      ['hive', 'hives'],
+      ['tive', 'tives'],
+      ['leaf', 'leaves'],
+      ['loaf', 'loaves'],
+      ['elf', 'elves'],
+      ['thief', 'thieves'],
+      ['series', 'series'],
+      ['movie', 'movies'],
+      ['x', 'xes'],
       ['mouse', 'mice'],
+      ['louse', 'lice'],
+      ['bus', 'buses'],
+      ['shoe', 'shoes'],
+      ['crisis', 'crises'],
+      ['axis', 'axes'],
+      ['octopus', 'octopi'],
+      ['virus', 'viri'],
+      ['status', 'statuses'],
+      ['alias', 'aliases'],
       ['ox', 'oxen'],
-      ['quiz', 'quizzes']
-    ].forEach(function(word) {
+      ['vertex', 'vertices'],
+      ['index', 'indices'],
+      ['matrix', 'matrices'],
+      ['quiz', 'quizzes'],
+      ['database', 'databases']
+  ];
+
+  describe('plurals from singular', function() {
+      combinations.forEach(function(word) {
       example('pluralize', word[0], word[1]);
     });
   });
-  describe('singulars', function() {
-    [
-      ['roses', 'rose'],
-      ['news', 'news'],
-      ['data', 'datum'],
-      ['analyses', 'analysis'],
-      ['hives', 'hive'],
-      ['soliloquies', 'soliloquy'],
-      ['series', 'series'],
-      ['movies', 'movie'],
-      ['wishes', 'wish'],
-      ['mice', 'mouse'],
-      ['buses', 'bus'],
-      ['shoes', 'shoe'],
-      ['bosses', 'boss'],
-      ['boss', 'boss'],
-      ['crises', 'crisis'],
-      ['viri', 'virus'],
-      ['statuses', 'status'],
-      ['oxen', 'ox'],
-      ['vertices', 'vertex'],
-      ['quizzes', 'quiz'],
-      ['databases', 'database']
-    ].forEach(function(word) {
-      example('singularize', word[0], word[1]);
+  describe('plurals from plural', function() {
+      combinations.forEach(function(word) {
+      example('pluralize', word[1], word[1]);
+    });
+  });
+  describe('singulars from plural', function() {
+      combinations.forEach(function(word) {
+      example('singularize', word[1], word[0]);
+    });
+  });
+  describe('singulars from single', function() {
+      combinations.forEach(function(word) {
+      example('singularize', word[0], word[0]);
     });
   });
   describe('irregulars', function() {
@@ -68,7 +73,8 @@ describe('inflector', function() {
       ['child', 'children'],
       ['sex', 'sexes'],
       ['move', 'moves'],
-      ['cow', 'kine']
+      ['cow', 'kine'],
+      ['zombie', 'zombies']
     ].forEach(function(word) {
       example('pluralize', word[0], word[1]);
       example('singularize', word[1], word[0]);
@@ -84,7 +90,11 @@ describe('inflector', function() {
       'series',
       'fish',
       'sheep',
-      'jeans'
+      'jeans',
+      'moose',
+      'deer',
+      'news',
+      'music'
     ].forEach(function(word) {
       example('pluralize', word, word);
       example('singularize', word, word);
